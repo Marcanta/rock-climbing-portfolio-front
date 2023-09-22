@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 html{
-    background-color: #E5E5E9;
+    /* background-color: #E5E5E9; */
+    background-image: url("background_colorfull_pattern.jpg");
+}
+
+body{
+    backdrop-filter: contrast(0.7);
+    overflow: scroll;
+    height: 100vw;
 }

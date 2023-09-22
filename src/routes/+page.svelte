@@ -1,7 +1,8 @@
 <script lang="ts">
-	import Card from '$lib/components/Card/index.svelte';
-	import ImageMasonry from '$lib/components/ImageMasonry/ImageMasonry.svelte';
+	import Card from '$lib/components/Card';
+	import ImageMasonry from '$lib/components/ImageMasonry';
 	import Map from '$lib/components/Map.svelte';
+	import MediaInput from '$lib/components/MediaInput/MediaInput.svelte';
 
 	const images: Image[] = [
 		{src: "https://picsum.photos/320/240", width: 320, height:240},
@@ -23,13 +24,18 @@
 </script>
 
 <div class="flex flex-col md:flex-row max-w-full">
-	<div class="flex flex-col h-full sm:h-min flex-2 bg-white m-5 p-4">
-		<Map />
+	<div>
+		<div class="flex flex-col h-full sm:h-min flex-2 bg-white m-5 p-4 shadow-lg">
+			<Map />
+		</div>
+		<div class="flex flex-col h-full sm:h-min flex-2 bg-white m-5 p-4 shadow-lg">
+			<MediaInput/>
+		</div>
 	</div>
 	<!-- <div class="flex flex-wrap overflow-y-scroll md:mt-5 w-full">
     
 	</div> -->
-	<div class="p-10 w-full">
+	<div class="p-10 mt-5 mr-5 w-full h-fit bg-slate-200 bg-opacity-70 shadow-lg">
 		<ImageMasonry images={images} />
 	</div>
 </div> 
